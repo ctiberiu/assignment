@@ -19,16 +19,19 @@ $sport-colors: (
   'Soccer': #3cb371,
 );
 
+// Import Sass modules
+@use "sass:map";
+
 // Export sport colors as CSS variables
 :root {
   --sport-color-default: #{$secondary-color};
   
   // Define each sport color variable manually to avoid issues with spaces in names
-  --sport-color-soccer: #{map-get($sport-colors, 'Soccer')};
-  --sport-color-basketball: #{map-get($sport-colors, 'Basketball')};
-  --sport-color-ice-hockey: #{map-get($sport-colors, 'Ice Hockey')};
-  --sport-color-american-football: #{map-get($sport-colors, 'American Football')};
-  --sport-color-motorsport: #{map-get($sport-colors, 'Motorsport')};
+  --sport-color-soccer: #{map.get($sport-colors, 'Soccer')};
+  --sport-color-basketball: #{map.get($sport-colors, 'Basketball')};
+  --sport-color-ice-hockey: #{map.get($sport-colors, 'Ice Hockey')};
+  --sport-color-american-football: #{map.get($sport-colors, 'American Football')};
+  --sport-color-motorsport: #{map.get($sport-colors, 'Motorsport')};
 }
 
 // Typography
