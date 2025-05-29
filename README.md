@@ -133,3 +133,7 @@ AI assistance was used for the following aspects of this project:
 - Adding comprehensive comments throughout the codebase
 - Organizing the project structure with separate SCSS files for components
 - Creating this README.md file
+=======
+# assignment
+Home Assignment - FE - Sports Leagues
+>>>>>>> 3ea1522f23dd4d7feaf7309139790d6fd2a8b779
