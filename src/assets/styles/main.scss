@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+// Base styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-family;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $text-color;
+  background-color: $background-color;
+}
+
+// Typography
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: $spacing-md;
+  font-weight: $font-weight-bold;
+}
+
+h1 {
+  font-size: $font-size-xxl;
+}
+
+h2 {
+  font-size: $font-size-xl;
+}
+
+h3 {
+  font-size: $font-size-large;
+}
+
+p {
+  margin-bottom: $spacing-md;
+}
+
+// Form elements
+button {
+  cursor: pointer;
+  font-family: $font-family;
+  font-size: $font-size-base;
+  padding: $spacing-sm $spacing-md;
+  border-radius: $border-radius-sm;
+  border: none;
+  background-color: $primary-color;
+  color: $white;
+  transition: background-color $transition-speed ease;
+
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+
+  &:disabled {
+    background-color: $light-gray;
+    cursor: not-allowed;
+  }
+}
+
+input, select {
+  font-family: $font-family;
+  font-size: $font-size-base;
+  padding: $spacing-sm $spacing-md;
+  border-radius: $border-radius-sm;
+  border: 1px solid $light-gray;
+  background-color: $white;
+  width: 100%;
+  transition: border-color $transition-speed ease;
+
+  &:focus {
+    outline: none;
+    border-color: $primary-color;
+  }
+}
+
+// Utility classes
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 $spacing-md;
+}
+
+.card {
+  background-color: $white;
+  border-radius: $border-radius-md;
+  box-shadow: $box-shadow;
+  padding: $spacing-lg;
+  margin-bottom: $spacing-lg;
+  transition: box-shadow $transition-speed ease;
+
+  &:hover {
+    box-shadow: $box-shadow-hover;
+  }
+}
+
+.badge {
+  display: inline-block;
+  padding: $spacing-xs $spacing-sm;
+  border-radius: $border-radius-sm;
+  background-color: $secondary-color;
+  color: $white;
+  font-size: $font-size-small;
+  font-weight: $font-weight-bold;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: $spacing-xl;
+  
+  &::after {
+    content: '';
+    width: 30px;
+    height: 30px;
+    border: 3px solid $light-gray;
+    border-top-color: $primary-color;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.error-message {
+  color: $error-color;
+  padding: $spacing-md;
+  border: 1px solid $error-color;
+  border-radius: $border-radius-sm;
+  margin-bottom: $spacing-md;
+}
+
+// Import component styles
+@import './components/index';

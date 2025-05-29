@@ -1,0 +1,71 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: $primary-color;
+  color: $white;
+  padding: $spacing-lg 0;
+  margin-bottom: $spacing-lg;
+  
+  h1 {
+    margin-bottom: $spacing-sm;
+  }
+  
+  p {
+    margin-bottom: 0;
+    opacity: 0.8;
+  }
+}
+
+main {
+  flex: 1;
+  padding-bottom: $spacing-xl;
+}
+
+.filters {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+  margin-bottom: $spacing-lg;
+  
+  @include respond-to(md) {
+    flex-direction: row;
+    align-items: center;
+    
+    > * {
+      flex: 1;
+    }
+  }
+}
+
+footer {
+  background-color: $black;
+  color: $white;
+  padding: $spacing-lg 0;
+  margin-top: auto;
+  
+  p {
+    margin-bottom: $spacing-xs;
+    text-align: center;
+  }
+  
+  .developer-info {
+    font-size: $font-size-small;
+    opacity: 0.8;
+    margin-top: $spacing-sm;
+    
+    a {
+      color: $white;
+      text-decoration: underline;
+      transition: opacity $transition-speed ease;
+      
+      &:hover {
+        opacity: 1;
+        text-decoration: none;
+      }
+    }
+  }
+}

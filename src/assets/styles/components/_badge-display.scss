@@ -1,0 +1,64 @@
+.badge-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba($black, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.badge-modal {
+  background-color: $white;
+  border-radius: $border-radius-md;
+  box-shadow: $box-shadow;
+  padding: $spacing-xl;
+  max-width: 90%;
+  width: 500px;
+  position: relative;
+  
+  .close-button {
+    position: absolute;
+    top: $spacing-sm;
+    right: $spacing-sm;
+    background: none;
+    color: $dark-gray;
+    font-size: $font-size-xl;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    
+    &:hover {
+      background-color: $light-gray;
+    }
+  }
+  
+  .league-title {
+    text-align: center;
+    margin-bottom: $spacing-lg;
+  }
+  
+  .badge-container {
+    display: flex;
+    justify-content: center;
+    padding: $spacing-lg 0;
+    
+    .badge-image {
+      max-width: 100%;
+      max-height: 300px;
+      object-fit: contain;
+    }
+  }
+  
+  .no-badge {
+    text-align: center;
+    padding: $spacing-xl 0;
+    color: $dark-gray;
+  }
+}

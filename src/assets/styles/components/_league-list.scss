@@ -1,0 +1,24 @@
+.league-list {
+  .empty-state {
+    text-align: center;
+    padding: $spacing-xl;
+    background-color: $white;
+    border-radius: $border-radius-md;
+    box-shadow: $box-shadow;
+  }
+  
+  .leagues-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $spacing-md;
+    margin-bottom: $spacing-xl;
+    
+    @include respond-to(sm) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @include respond-to(lg) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
